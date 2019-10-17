@@ -44,11 +44,14 @@
           <div class="container">
             <div class="row">
               <div class="col-6">
-                <h1>Bootstrap Tutorial</h1>
-                <p>Bootstrap is the most popular HTML, CSS...</p>
+                <div class="content"  v-for="question in questions">
+                  <h3 v-if="question.number == number">Question {{question.number}}</h3>
+                  <p v-if="question.number == number">{{question.content}}</p>
+                </div>
+                <button type="button" class="btn btn-primary" @click="changeQuestion"> Submit</button>
               </div>
               <div class="col-6">
-                
+
               </div>
             </div>
           </div>
