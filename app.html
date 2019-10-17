@@ -13,51 +13,54 @@
   <title>XScience</title>
 </head>
 <body>
-  <nav id="app" class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <ul class="navbar-nav">
     <li class="nav-item active">
       <a class="nav-link" href="#">XScience</a>
     </li>
   </ul>
 </nav>
-<div class="container color">
-  <div class="row">
-    <div class="col-lg-3">
-    </div>
-    <div class="col-lg-6">
-      <p><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse ultrices gravida dictum fusce ut placerat. Sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus. Nulla malesuada pellentesque elit eget gravida cum sociis. Vitae tortor condimentum lacinia quis vel eros donec ac odio.</p>
-    </div>
-    <div class="col-lg-3">
-
-    </div>
-  </div>
-</div>
-<div class="container">
-  <div class="row">
+<div id="app">
+  <section class="container color" v-if="!gameIsRunning">
+    <div class="row">
       <div class="col-lg-3">
       </div>
       <div class="col-lg-6">
-        <button type="button" class="btn btn-primary">Start Playing</button>
+        <p><br>You are about to start a game that tests your programming's skills. This test has 10 questions and the level gets higher gradually, wich means that each question is harder than the past question. All ten questions are made in language C, so even if you do not consider yourself a senior developer, you would be able to at least try to answer some of them. Good Luck!</p>
+        <br><button type="button" class="btn btn-primary" @click="startGame">Start Playing</button>
       </div>
       <div class="col-lg-3">
 
       </div>
-  </div>
+    </div>
+  </section>
+  <section class="container" v-else>
+    <div class="row">
+      <div class="col-lg-2">
+      </div>
+      <div class="col-lg-8">
+        <br><br>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <h1>Bootstrap Tutorial</h1>
+                <p>Bootstrap is the most popular HTML, CSS...</p>
+              </div>
+              <div class="col-6">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+
+      </div>
+    </div>
+  </section>
+
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-3">
-    </div>
-    <div class="col-lg-6">
-      
-    </div>
-    <div class="col-lg-3">
-
-    </div>
-  </div>
-</div>
-
-
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
