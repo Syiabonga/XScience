@@ -45,10 +45,19 @@
             <div class="row">
               <div class="col-6">
                 <div class="content"  v-for="question in questions">
-                  <h3 v-if="question.number == number">Question {{question.number}}</h3>
-                  <p v-if="question.number == number">{{question.content}}</p>
-                </div>
-                <button type="button" class="btn btn-primary" @click="changeQuestion"> Submit</button>
+                  <div class="content" v-if="question.number == number">
+                    <h3>Question {{question.number}}</h3>
+                    <p>{{question.content}}</p>
+                    <input type="radio" id="one" value="one" v-model="picked">
+                    <label for="one"> {{question.output1}}</label>
+                    <br>
+                    <input type="radio" id="two" value="two" v-model="picked">
+                    <label for="two">{{question.output2}}</label>
+                    <br>
+                    <span>Answer: {{ picked }}</span><br>
+                  <button type="button" class="btn btn-primary" v-if="question.answer == picked" @click="changeQuestion"> Submit</button>
+                  </div>
+              </div>
               </div>
               <div class="col-6">
 
