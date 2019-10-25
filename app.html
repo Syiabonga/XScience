@@ -26,7 +26,7 @@
       <div class="col-lg-3">
       </div>
       <div class="col-lg-6">
-        <p><br>You are about to start a game that tests your programming's skills. This test has 10 questions and the level increases gradually, wich means that each question is harder than the past question. All ten questions are made in language C, so even if you do not consider yourself a senior developer, you would be able to at least try to answer some of them. Good Luck!</p>
+        <p><br>You are about to start a game that tests your programming's skills. This game has 10 questions and the level increases gradually, wich means that each question is harder than the past question. All ten questions are made in language C, so even if you do not consider yourself a senior developer, you would be able to at least try to answer some of them. Good Luck!</p>
         <br><button type="button" class="btn btn-primary" @click="startGame">Start Playing</button>
       </div>
       <div class="col-lg-3">
@@ -54,13 +54,14 @@
                     <input type="radio" id="two" value="two" v-model="picked">
                     <label for="two">{{question.output2}}</label>
                     <br>
-                    <button class="btn btn-primary" type="button" name="button" @click="changeQuestion($event, question.answer)">Answer</button>
+                    <button class="btn btn-primary" type="button" name="button" @click="changeQuestion($event, question.answer,value)">Answer</button>
                   </div>
               </div>
               </div>
               <div class="col-6">
                 <h3>Points: {{points}}</h3><br>
                 <h3>Attempts left: {{attempts}}</h3>
+                <button class="btn btn-danger" type="button" name="button" @click="giveUp"> Give Up</button>
               </div>
             </div>
           </div>
