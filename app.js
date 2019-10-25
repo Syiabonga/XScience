@@ -25,7 +25,8 @@ new Vue({
     },
     changeQuestion: function(event,answer,picked){
       if (this.number == 10) {
-        return alert('Congratulations, keep working hard! This world needs more peole like you');
+        return alert('Congratulations, keep working hard! This world needs more people like you');
+        this.gameIsRunning = false;
       }
       if (this.picked == answer) {
         alert('You such an amazing dev, oh Lord!');
